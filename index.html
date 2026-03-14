@@ -1,47 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="stars"></div>
-    <div class="container">
-        <div class="content">
-            <h1 class="title">🎉 Happy Birthday! 🎉</h1>
-            <p class="subtitle">To My Amazing Girlfriend</p>
-            
-            <div class="message-box">
-                <p>You make every day special! On your birthday, I want you to know how much you mean to me. Thank you for all the love, laughter, and beautiful memories we share together. You're my favorite person and I love you so much! 💕</p>
-            </div>
-            
-            <div class="features">
-                <div class="feature">
-                    <span class="emoji">💕</span>
-                    <p>Love</p>
-                </div>
-                <div class="feature">
-                    <span class="emoji">🎂</span>
-                    <p>Cake</p>
-                </div>
-                <div class="feature">
-                    <span class="emoji">✨</span>
-                    <p>Magic</p>
-                </div>
-            </div>
-            
-            <button class="btn" onclick="showSurprise()">Click for a Surprise! 🎁</button>
-            
-            <div class="surprise hidden" id="surprise">
-                <h2>I Love You! 💖</h2>
-                <p>You deserve all the happiness in the world. Happy Birthday, beautiful! 🌹</p>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, Princess Gille 💖</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-orbit"></div>
+    <div class="bg-bubbles"></div>
+
+    <main class="shell">
+      <header class="hero" id="top">
+        <div class="hero-text">
+          <p class="hero-tag">To my one and only</p>
+          <h1 class="hero-title">
+            Happy Birthday,<br />
+            <span class="hero-name">Princess Gille</span>
+          </h1>
+          <p class="hero-sub">
+            Today the world gets to celebrate the girl who makes my whole sky
+            pink and blue.
+          </p>
+
+          <div class="hero-actions">
+            <button id="openSurprise" class="btn primary">
+              Open your special surprise 🎁
+            </button>
+            <button data-scroll="#reasons" class="btn ghost">
+              See why you're magical ✨
+            </button>
+          </div>
+
+          <div class="hero-whisper">
+            P.S. You are more beautiful than every star in this page combined.
+          </div>
         </div>
+
+        <section class="hero-card">
+          <p class="date-pill">Your day • Today</p>
+          <p class="hero-note">
+            I am so thankful that the universe decided that <strong>you</strong>
+            should exist — and that somehow I got lucky enough to be the one who
+            holds your hand through it all.
+          </p>
+          <p class="hero-note">
+            This little website is just a tiny love letter, wrapped in pink and
+            blue, dedicated to <strong>Princess Gille</strong>. 💗💙
+          </p>
+        </section>
+      </header>
+
+      <section class="section" id="reasons">
+        <h2 class="section-title">Reasons you are pure magic ✨</h2>
+        <p class="section-sub">
+          I could list a thousand, but here are a few little stars from my
+          galaxy of reasons.
+        </p>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icon">💖</div>
+            <h3 class="card-title">Your heart</h3>
+            <p class="card-text">
+              You care so deeply, even about the smallest things. Your kindness
+              makes the world softer and safer for everyone around you —
+              especially me.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">💙</div>
+            <h3 class="card-title">Your mind</h3>
+            <p class="card-text">
+              The way you think, dream, and see the world is my favorite
+              adventure. Talking to you turns ordinary days into something
+              extraordinary.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🌸</div>
+            <h3 class="card-title">Your presence</h3>
+            <p class="card-text">
+              You walk into a room and suddenly everything feels lighter, warmer
+              and more alive. You are my calm, my chaos, and my happy all at
+              once.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🌙</div>
+            <h3 class="card-title">Your magic</h3>
+            <p class="card-text">
+              Somehow you turn late-night talks into therapy, silence into
+              comfort, and every moment with you into a memory I never want to
+              let go of.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="letter">
+        <h2 class="section-title">A tiny love letter for you 💌</h2>
+        <p class="section-sub">
+          From me to you — because you deserve to be reminded how loved you
+          are.
+        </p>
+
+        <article class="letter">
+          <p class="letter-greeting">My dearest Princess Gille,</p>
+          <p>
+            If I could wrap every soft pink sunrise and every calm blue sunset
+            into a gift, it would still never come close to how precious you
+            are to me.
+          </p>
+          <p>
+            Thank you for your patience, your laughter, your honesty, and the
+            way you make even the most ordinary moments feel like tiny pieces of
+            magic. You make me want to be better, kinder, and braver — because
+            you deserve nothing less than the very best version of me.
+          </p>
+          <p class="letter-more hidden" id="letterMore">
+            I love the way you talk about the things you care about, the way
+            your eyes light up when you’re excited, and the way your voice
+            immediately makes everything feel okay. I am endlessly grateful that
+            in this entire universe, somehow, our paths crossed and decided to
+            stay tangled together.
+            <br /><br />
+            On your birthday and every day, I hope you never forget this: you
+            are loved, you are cherished, and no matter what the world throws at
+            you, you will never have to face it alone — because I’ll be right
+            beside you, cheering for you, holding you, and loving you more than
+            yesterday but less than tomorrow.
+          </p>
+          <p class="letter-signoff">
+            With all my love,<br />
+            <span class="letter-signature">your person 💗</span>
+          </p>
+
+          <button id="toggleLetter" class="btn subtle">
+            Read the rest of the letter ✨
+          </button>
+        </article>
+      </section>
+
+      <section class="section" id="wishes">
+        <h2 class="section-title">Little wishes just for you 🎂</h2>
+        <p class="section-sub">
+          Tap the button and let the universe pull out a random wish created
+          just for you.
+        </p>
+
+        <div class="wish-box">
+          <div id="wishText" class="wish-text">
+            Tap the button to receive a wish written in pink and blue just for
+            Princess Gille.
+          </div>
+          <button id="newWish" class="btn secondary">
+            Give me another wish 💫
+          </button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>
+          Made with ridiculous amounts of love for
+          <span class="footer-name">Princess Gille</span>.
+        </p>
+        <button data-scroll="#top" class="footer-link">
+          Back to the top ⬆️
+        </button>
+      </footer>
+    </main>
+
+    <!-- Surprise overlay -->
+    <div id="surprisePanel" class="surprise-overlay hidden" aria-hidden="true">
+      <div class="surprise-content">
+        <button class="surprise-close" id="closeSurprise" aria-label="Close">
+          ✕
+        </button>
+        <p class="surprise-label">For Princess Gille</p>
+        <h2 class="surprise-title">You are my favorite miracle 💖</h2>
+        <p class="surprise-body">
+          If every star in the sky represented a reason I love you, the universe
+          still wouldn’t be big enough. On your birthday, I just want you to
+          remember this one thing:
+          <strong>you are the best part of my world.</strong>
+        </p>
+        <p class="surprise-body">
+          No matter what happens, no matter how days change, my heart will
+          always, always choose you.
+        </p>
+        <button id="moreConfetti" class="btn primary small">
+          One more burst of magic 🎉
+        </button>
+      </div>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
