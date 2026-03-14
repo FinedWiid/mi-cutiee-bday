@@ -107,6 +107,18 @@ function setupLetterToggle() {
   });
 }
 
+function fillLoveSpam() {
+  const container = document.getElementById("loveSpam");
+  if (!container) return;
+
+  const times = 365;
+  const parts = [];
+  for (let i = 0; i < times; i += 1) {
+    parts.push("I love you");
+  }
+  container.textContent = parts.join(" · ") + ".";
+}
+
 function setupWishes() {
   const wishText = $("#wishText");
   const btn = $("#newWish");
@@ -201,4 +213,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setupLetterToggle();
   setupWishes();
   setupSurprisePanel();
+  fillLoveSpam();
 });
