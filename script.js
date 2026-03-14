@@ -101,6 +101,13 @@ function setupLetterToggle() {
 
   toggle.addEventListener("click", () => {
     const isOpen = more.classList.toggle("is-open");
+
+    if (isOpen) {
+      more.classList.remove("hidden");
+    } else {
+      more.classList.add("hidden");
+    }
+
     toggle.textContent = isOpen
       ? "Hide the rest 💗"
       : "Read the rest of the letter ✨";
