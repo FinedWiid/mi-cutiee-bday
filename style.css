@@ -592,12 +592,16 @@ body {
 
 @media (max-width: 640px) {
   body {
+    display: block;
+    min-height: 100vh;
     padding: 10px;
   }
 
   .shell {
     border-radius: 22px;
     padding-inline: 16px;
+    margin-inline: auto;
+    max-width: 100%;
   }
 
   .hero-actions {
