@@ -1,11 +1,3 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --pink-soft: #ffc4e3;
   --pink-strong: #ff5fa8;
@@ -23,6 +15,14 @@
   --transition-med: 260ms ease-out;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -35,7 +35,7 @@ body {
   background: radial-gradient(circle at top left, #ffb3dc, #fdebff 40%, #b9e8ff);
   background-attachment: fixed;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   padding: 18px;
 }
@@ -353,6 +353,43 @@ body {
   font-family: "Great Vibes", cursive;
   font-size: 1.4rem;
   color: var(--pink-deep);
+}
+
+.compliment-pop {
+  position: fixed;
+  z-index: 30;
+  max-width: 220px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 197, 234, 0.95);
+  box-shadow: 0 14px 34px rgba(76, 24, 110, 0.4);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: #6b4a8b;
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+  animation: compliment-pop 1.8s ease-out forwards;
+  text-align: center;
+}
+
+@keyframes compliment-pop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -90%) scale(0.9);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, -110%) scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -135%) scale(1.02);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -170%) scale(0.96);
+  }
 }
 
 .wish-box {

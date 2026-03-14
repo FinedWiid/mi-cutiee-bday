@@ -12,6 +12,29 @@ if (typeof confetti === "function" && typeof confetti.shapeFromText === "functio
   }
 }
 
+const compliments = [
+  "Princess Gille, you make pink and blue look jealous.",
+  "You’re the softest part of every hard day.",
+  "The universe really showed off when it made you.",
+  "Your laugh is my favorite sound in any timeline.",
+  "You don’t just light up rooms, you soften them.",
+  "Every version of the future I want has you in it.",
+  "You are proof that gentle can also be powerful.",
+  "Your smile could fix a whole galaxy’s mood.",
+  "You are prettier than every sunset I’ve ever seen.",
+  "You’re the plot twist my life was waiting for.",
+  "You make overthinking feel a little less scary.",
+  "You’re the coziest place my heart has ever found.",
+  "Your heart was handcrafted by the stars themselves.",
+  "You make ordinary minutes feel like movie scenes.",
+  "The world is softer and safer because you exist.",
+  "You are art that somehow learned how to breathe.",
+  "Every time you talk about what you love, you glow.",
+  "You are the loveliest thing I’ve ever called ‘mine’.",
+  "If hearts had royalty, you’d be the queen of them all.",
+  "You are my favorite pink-and-blue miracle, always.",
+];
+
 function burstConfetti(intensity = 45) {
   if (typeof confetti !== "function") return;
 
@@ -121,6 +144,25 @@ function setupSurprisePanel() {
   const moreConfetti = $("#moreConfetti");
   if (!panel) return;
 
+  const spawnComplimentBubble = (anchor) => {
+    if (!anchor) return;
+    const rect = anchor.getBoundingClientRect();
+    const bubble = document.createElement("div");
+    bubble.className = "compliment-pop";
+
+    const index = Math.floor(Math.random() * compliments.length);
+    bubble.textContent = compliments[index];
+
+    bubble.style.left = `${rect.left + rect.width / 2}px`;
+    bubble.style.top = `${rect.top}px`;
+
+    document.body.appendChild(bubble);
+
+    setTimeout(() => {
+      bubble.remove();
+    }, 1900);
+  };
+
   const openPanel = () => {
     panel.classList.remove("hidden");
     panel.setAttribute("aria-hidden", "false");
@@ -133,7 +175,10 @@ function setupSurprisePanel() {
     panel.setAttribute("aria-hidden", "true");
   };
 
-  open?.addEventListener("click", openPanel);
+  open?.addEventListener("click", () => {
+    spawnComplimentBubble(open);
+    openPanel();
+  });
   close?.addEventListener("click", closePanel);
 
   panel.addEventListener("click", (event) => {
