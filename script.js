@@ -117,10 +117,10 @@ function setupWishes() {
     "I wish your heart could see itself the way I see it: brave, gentle, hilarious, and made of the prettiest shades of pink and blue.",
     "May all your quiet dreams start gently coming true this year, one by one, until you suddenly realize how far you’ve come.",
     "I hope you never forget that even on the hardest days, you are still the girl I’d choose in every universe, every lifetime, every timeline.",
-    "May you always have someone to hold your hand, listen to your rants, and remind you how magical and important you are — especially me.",
+    "May you always have someone to hold your hand, listen to your rants, and remind you how magical and important you are, especially me.",
     "I wish your days ahead are filled with unexpected little joys: your favorite songs at the perfect moment, soft blankets, and people who truly see you.",
     "May your reflection always remind you: you are not just beautiful, you are breathtaking, inside and out.",
-    "I hope this year gives you new reasons to be proud of yourself — and that you actually pause to celebrate how incredible you are.",
+    "I hope this year gives you new reasons to be proud of yourself and that you actually pause to celebrate how incredible you are.",
   ];
 
   let lastIndex = -1;
