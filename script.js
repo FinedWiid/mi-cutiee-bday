@@ -2,40 +2,55 @@
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => Array.from(document.querySelectorAll(selector));
 
-function burstConfetti(intensity = 80) {
+// Try to create a heart shape for confetti (falls back gracefully if not supported)
+let heartShape = null;
+if (typeof confetti === "function" && typeof confetti.shapeFromText === "function") {
+  try {
+    heartShape = confetti.shapeFromText({ text: "❤", scalar: 1.2 });
+  } catch {
+    heartShape = null;
+  }
+}
+
+function burstConfetti(intensity = 45) {
   if (typeof confetti !== "function") return;
 
-  const colors = ["#ffb3e6", "#ff5fa8", "#b5e4ff", "#4fa9ff", "#ffffff"];
+  const colors = ["#ff9acb", "#ffc4e8", "#bde6ff", "#8fd3ff"];
 
   confetti({
     particleCount: intensity,
-    spread: 70,
-    origin: { y: 0.3 },
-    scalar: 1.1,
-    ticks: 200,
+    spread: 65,
+    origin: { y: 0.35 },
+    scalar: 0.9,
+    ticks: 180,
     colors,
+    shapes: heartShape ? [heartShape] : undefined,
   });
 }
 
-function gentleConfettiStream(durationMs = 1600) {
+function gentleConfettiStream(durationMs = 1400) {
   if (typeof confetti !== "function") return;
 
   const end = Date.now() + durationMs;
 
   (function frame() {
     confetti({
-      particleCount: 4,
+      particleCount: 3,
       angle: 60,
-      spread: 45,
+      spread: 40,
       origin: { x: 0 },
-      colors: ["#ffb3e6", "#ffd6f2", "#b5e4ff"],
+      colors: ["#ffb3e6", "#ffc9f0", "#c4e9ff"],
+      scalar: 0.8,
+      shapes: heartShape ? [heartShape] : undefined,
     });
     confetti({
-      particleCount: 4,
+      particleCount: 3,
       angle: 120,
-      spread: 45,
+      spread: 40,
       origin: { x: 1 },
-      colors: ["#ffb3e6", "#ffd6f2", "#b5e4ff"],
+      colors: ["#ffb3e6", "#ffc9f0", "#c4e9ff"],
+      scalar: 0.8,
+      shapes: heartShape ? [heartShape] : undefined,
     });
 
     if (Date.now() < end) {
