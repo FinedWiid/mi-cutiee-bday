@@ -1,0 +1,18 @@
+.container {
+  background: linear-gradient(to right, #ff7f7f, #87cefa);
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  color: #ff4c4c;
+}
+
+.button {
+  background-color: #ff7f7f;
+  color: white;
+}
+
+.button:hover {
+  background-color: #87cefa;
+}
