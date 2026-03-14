@@ -1,5 +1,3 @@
-// Existing code...
-
 // Function to trigger confetti animation
 function startConfetti() {
   const duration = 5 * 1000; // 5 seconds
@@ -25,8 +23,11 @@ function startConfetti() {
   })();
 }
 
-// Adding surprise button functionality
-const surpriseButton = document.createElement('button');
-surpriseButton.innerText = "Surprise!";
-surpriseButton.onclick = startConfetti;
-document.body.appendChild(surpriseButton);
+// Called from the HTML button's onclick
+function showSurprise() {
+  const surprise = document.getElementById("surprise");
+  if (surprise) {
+    surprise.classList.remove("hidden");
+  }
+  startConfetti();
+}
